@@ -1,44 +1,27 @@
 <html>
 <head>
   <style>
-    /* Define a style for the spinning circle */
-    #loading-wheel {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      border: 10px solid #333;
-      border-top-color: #555;
-      animation: spin 1s linear infinite;
-      position: relative;
-    }
-
-    /* Define the animation for the spinning circle */
-    @keyframes spin {
-      to {
-        transform: rotate(360deg);
-      }
-    }
-
     /* Define a style for the countdown display */
     #countdown {
+      font-size: 24px;
+      font-weight: bold;
+      font-family: "Roboto", sans-serif;
       position: relative;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
     }
-    
+
+    /* Apply the Roboto font to all text on the page */
+    body {
+      font-family: "Roboto", sans-serif;
+    }
   </style>
 </head>
 <body>
-  <!-- Create a div to hold the spinning circle -->
-  <div id="loading-wheel"></div>
-
   <!-- Create a div to hold the countdown display -->
   <div id="countdown"></div>
 
   <script>
     // Set the initial value for the countdown
-    var countdown = 10;
+    var countdown = 25;
 
     // Update the countdown display every second
     setInterval(function() {
