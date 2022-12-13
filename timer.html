@@ -9,7 +9,9 @@
           border: 60px solid rgb(68, 114, 157);
           border-top-color: rgba(13, 80, 147, 0.731);
           animation: spin 1s linear infinite;
-          position:static;
+          position:absolute;
+          top:2.5%;
+          left:2.5%;
         }
       
         /* Define the animation for the spinning circle */
@@ -25,7 +27,9 @@
           font-weight: bold;
           color: rgb(43, 46, 226);
           font-family: "Roboto", sans-serif;
-          position:static;
+          position:absolute;
+          top:2.5%;
+          left:2.5%;
         }
       
         /* Apply the Roboto font to all text on the page */
@@ -51,7 +55,7 @@
       countdown--;
   
       // Update the countdown display with the current value
-      document.getElementById("countdown").innerHTML = "Loading: " & countdown;
+      document.getElementById("countdown").innerHTML = countdown;
   
       if (countdown <= 0) {
         // Redirect to picture when the timer hits zero
