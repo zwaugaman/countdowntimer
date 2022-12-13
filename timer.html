@@ -9,6 +9,7 @@
       border: 10px solid #333;
       border-top-color: #555;
       animation: spin 1s linear infinite;
+      position: relative;
     }
 
     /* Define the animation for the spinning circle */
@@ -20,9 +21,12 @@
 
     /* Define a style for the countdown display */
     #countdown {
-      font-size: 24px;
-      font-weight: bold;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
+    
   </style>
 </head>
 <body>
