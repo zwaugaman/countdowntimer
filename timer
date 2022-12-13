@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Countdown Timer</title>
+  </head>
+  <body>
+    <h1>Countdown Timer</h1>
+    <p id="timer"></p>
+    <script>
+      var count = 15;
+      var timer = setInterval(function() {
+        count--;
+        document.getElementById("timer").innerHTML = count;
+        if (count == 0) {
+          clearInterval(timer);
+        }
+      }, 1000);
+    </script>
+  </body>
+</html>
