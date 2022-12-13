@@ -1,46 +1,46 @@
 <html>
 <head>
-  <style>
-    /* Define a style for the spinning circle */
-    #spinning-circle {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      border: 40px solid rgb(1, 116, 210);
-      border-top-color: rgb(117, 173, 222);
-      animation: spin 1s linear infinite;
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    /* Define the animation for the spinning circle */
-    @keyframes spin {
-      to {
-        transform: rotate(360deg);
-      }
-    }
-
-    /* Define a style for the countdown display */
-    #countdown {
-        font-size: 24px;
-        font-weight: bold;
-        color: blueviolet;
-  
-      font-family: "Roboto", sans-serif;
-      align-items: center;
-      position: relative;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-
-    /* Apply the Roboto font to all text on the page */
-    body {
-      font-family: "Roboto", sans-serif;
-    }
-  </style>
+    <style>
+        /* Define a style for the spinning circle */
+        #spinning-circle {
+          width: 100px;
+          height: 100px;
+          border-radius: 50%;
+          border: 40px solid rgb(1, 116, 210);
+          border-top-color: rgb(117, 173, 222);
+          animation: spin 1s linear infinite;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      
+        /* Define the animation for the spinning circle */
+        @keyframes spin {
+          to {
+            transform: rotate(360deg);
+          }
+        }
+      
+        /* Define a style for the countdown display */
+        #countdown {
+          font-size: 24px;
+          font-weight: bold;
+          color: blueviolet;
+          font-family: "Roboto", sans-serif;
+          align-items: center;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+        }
+      
+        /* Apply the Roboto font to all text on the page */
+        body {
+          font-family: "Roboto", sans-serif;
+        }
+      </style>
 </head>
 <body>
   <!-- Create a div to hold the spinning circle -->
