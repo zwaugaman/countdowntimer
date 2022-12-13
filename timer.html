@@ -35,7 +35,7 @@
       var timer = setInterval(function() {
         count--;
         var percent = (count / 25) * 100;
-        progressBar.style.transform = "rotate(" + (percent * 3.6) + "deg)";
+        progressBar.style.transform = "rotate(" + ((100 - percent) * 3.6) + "deg)";
         if (count == 0) {
           clearInterval(timer);
           progressBar.classList.add("complete");
