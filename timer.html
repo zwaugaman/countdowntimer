@@ -18,6 +18,12 @@
       animation: progress 25s linear forwards;
     }
 
+    #countdown {
+      text-align: center;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
     @keyframes progress {
       0% {
         width: 100%;
@@ -26,11 +32,22 @@
         width: 0%;
       }
     }
+
+    @keyframes countdown {
+      0% {
+        content: '25';
+      }
+      100% {
+        content: '0';
+      }
+    }
   </style>
 </head>
 <body>
   <div id="progress-bar">
     <div id="bar"></div>
+    <img id="image" src="https://example.com/image.png" style="display: none;" />
   </div>
+  <div id="countdown"></div>
 </body>
 </html>
