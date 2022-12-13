@@ -28,8 +28,8 @@
           color: rgb(43, 46, 226);
           font-family: "Roboto", sans-serif;
           position:relative;
-          top:50%;
-          left:50%;
+          top:60%;
+          left:60%;
         }
       
         /* Apply the Roboto font to all text on the page */
@@ -55,7 +55,7 @@
       countdown--;
   
       // Update the countdown display with the current value
-      document.getElementById("countdown").innerHTML = countdown;
+      document.getElementById("countdown").innerHTML = "Loading: " & countdown;
   
       if (countdown <= 0) {
         // Redirect to picture when the timer hits zero
