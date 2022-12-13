@@ -1,18 +1,47 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Countdown Timer</title>
+    <title>Circular Progress Bar</title>
+    <style>
+      .progress-bar {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        border: 4px solid #333;
+        position: relative;
+      }
+      .progress-bar:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background-color: #333;
+        transform: rotate(0deg);
+        transition: transform 1s linear;
+      }
+      .progress-bar.complete:before {
+        transform: rotate(360deg);
+      }
+    </style>
   </head>
   <body>
-    <h1>Countdown Timer</h1>
-    <p id="timer"></p>
+    <div class="progress-bar" id="progress-bar"></div>
     <script>
-      var count = 15;
+      var count = 25;
+      var progressBar = document.getElementById("progress-bar");
       var timer = setInterval(function() {
         count--;
-        document.getElementById("timer").innerHTML = count;
+        var percent = (count / 25) * 100;
+        progressBar.style.transform = "rotate(" + (percent * 3.6) + "deg)";
         if (count == 0) {
           clearInterval(timer);
+          progressBar.classList.add("complete");
+          setTimeout(function() {
+            progressBar.style.display = "none";
+          }, 1000);
         }
       }, 1000);
     </script>
