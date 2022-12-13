@@ -2,17 +2,24 @@
 <head>
   <style>
     /* Define a style for the spinning circle */
-    #loading-wheel {
+    #spinning-circle {
       width: 100px;
       height: 100px;
       border-radius: 50%;
-      border: 30px solid rgb(60, 1, 210);
-      border-top-color: rgb(16, 130, 229);
+      border: 40px solid rgb(1, 116, 210);
+      border-top-color: rgb(117, 173, 222);
       animation: spin 1s linear infinite;
       position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
+    }
+
+    /* Display an image from a google drive embed link: https://drive.google.com/file/d/1bQ_q8YgxngwFWkVePO_XbX8G5ejqPVBp/preview?usp=sharing&embed=true */
+    #picture {
+        display: block;
+        width: 100%;
+        height: auto;
     }
 
     /* Define the animation for the spinning circle */
@@ -30,12 +37,10 @@
   
       font-family: "Roboto", sans-serif;
       align-items: center;
-            position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      float: top;     
-
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
 
     /* Apply the Roboto font to all text on the page */
@@ -46,14 +51,20 @@
 </head>
 <body>
   <!-- Create a div to hold the spinning circle -->
-  <div id="loading-wheel"></div>
+  <div id="spinning-circle"></div>
 
   <!-- Create a div to hold the countdown display -->
   <div id="countdown"></div>
 
+  <!-- Create a div to hold the picture -->
+  <img id="picture" src="https://drive.google.com/file/d/1bQ_q8YgxngwFWkVePO_XbX8G5ejqPVBp/preview?usp=sharing&embed=true" hidden>
+
   <script>
     // Set the initial value for the countdown
-    var countdown = 10;
+    var countdown = 25;
+
+    // Hide the image initially
+    document.getElementById("picture").hidden = true;
 
     // Update the countdown display every second
     setInterval(function() {
@@ -62,6 +73,20 @@
 
       // Update the countdown display with the current value
       document.getElementById("countdown").innerHTML = countdown;
+
+      // Hide the countdown display and spinning circle when timer hits zero and display an image
+      if (countdown <= 0) {
+        // Hide the countdown display
+        document.getElementById("countdown").hidden = true;
+        
+        // Hide the spinning-circle
+        document.getElementById("spinning-circle").hidden = true;
+        
+        // Show the image
+        document.getElementById("picture").hidden = false;
+        }
+
+
     }, 1000);
   </script>
 </body>
