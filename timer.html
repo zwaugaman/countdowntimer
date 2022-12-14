@@ -27,17 +27,23 @@
           font-weight: bold;
           color: rgb(43, 46, 226);
           font-family: "Roboto", sans-serif;
-          position: absolute;
-          top: 0;
-          left: 50%;
-          transform: translateX(-50%);
-          text-align: center;
+          position:absolute;
+          top:2.5%;
+          left:2.5%;
         }
       
         /* Apply the Roboto font to all text on the page */
         body {
           font-family: "Roboto", sans-serif;
         }
+
+        /* Use a media query to apply the following styles only if the screen width is less than 512 pixels */
+        @media (max-width: 512px) {
+        img {
+           width: 100%;
+         }
+        }
+
       </style>
 </head>
 <body>
