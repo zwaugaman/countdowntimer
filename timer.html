@@ -9,9 +9,11 @@
           border: 60px solid rgb(68, 114, 157);
           border-top-color: rgba(13, 80, 147, 0.731);
           animation: spin 2s linear infinite;
+          /* Make the #spinning-circle element appear centered on the page */
           position:absolute;
-          top:2.5%;
-          left:2.5%;
+          top:50%;
+          left:50%;
+          transform: translate(-50%, -50%);
         }
       
         /* Define the animation for the spinning circle */
@@ -39,13 +41,6 @@
         /* Apply the Roboto font to all text on the page */
         body {
           font-family: "Roboto", sans-serif;
-        }
-
-        /* Use a media query to apply the following styles only if the screen width is less than 512 pixels */
-        @media (max-width: 512px) {
-        img {
-           width: 100%;
-         }
         }
 
       </style>
